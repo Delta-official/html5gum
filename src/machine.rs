@@ -167,9 +167,6 @@ use super::*;
                     slf.machine_helper.temporary_buffer.clear();
                     slf.emitter.init_processing_instruction();
                     switch_to!(slf, ProcessingInstructionOpen)
-                    // error!(slf, Error::UnexpectedQuestionMarkInsteadOfTagName);
-                    // slf.emitter.init_comment();
-                    // reconsume_in!(slf, c, BogusComment)
                 }
                 None => {
                     error!(slf, Error::EofBeforeTagName);
